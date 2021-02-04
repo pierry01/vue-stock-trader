@@ -1,5 +1,13 @@
 <template>
-  <h1>Stock Trader</h1>
+  <VApp>
+    <VMain>
+      <VContainer>
+        <RouterView>
+
+        </RouterView>
+      </VContainer>
+    </VMain>
+  </VApp>
 </template>
 
 <script>
