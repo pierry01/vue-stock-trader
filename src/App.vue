@@ -1,15 +1,19 @@
 <template>
-  <VApp>
-    <VMain>
-      <VContainer>
-        <RouterView>
+  <v-app>
+    <Header />
 
-        </RouterView>
-      </VContainer>
-    </VMain>
-  </VApp>
+    <v-main>
+      <v-container>
+        <RouterView />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-export default {};
+import Header from "./components/Header";
+
+export default {
+  components: { Header },
+};
 </script>
