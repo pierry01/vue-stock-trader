@@ -2,7 +2,7 @@
   <v-app>
     <Header />
 
-    <v-main>
+    <v-main class="mt-4">
       <v-container>
         <transition name="slide" mode="out-in">
           <RouterView />
