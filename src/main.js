@@ -8,8 +8,8 @@ import store from "./store/store";
 Vue.config.productionTip = false;
 
 new Vue({
-  vuetify: vuetify,
-  router: router,
-  store: store,
+  vuetify,
+  router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");
