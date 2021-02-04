@@ -2,8 +2,8 @@
   <v-card color="grey lighten-4" flat tile>
     <v-toolbar dense>
       <v-toolbar-title class="headline text-uppercase mr-4">
-        <span>Stock</span>
-        <span class="font-weight-light"> Trader</span>
+        <span> Stock </span>
+        <span class="font-weight-light"> Trader </span>
       </v-toolbar-title>
 
       <v-toolbar-items>
