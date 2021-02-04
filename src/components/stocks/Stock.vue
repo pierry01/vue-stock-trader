@@ -16,14 +16,19 @@
           label="Quantidade"
           type="Number"
           class="pr-3"
+          :error="
+            insufficientFunds || quantity < 0 || !Number.isInteger(quantity)
+          "
         />
 
         <v-btn
           class="green darken-3 white--text"
           @click="buyStock"
-          :disabled="quantity <= 0 || !Number.isInteger(quantity)"
+          :disabled="
+            insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)
+          "
         >
-          Comprar
+          {{ insufficientFunds ? "Insuficiente" : "Comprar" }}
         </v-btn>
       </v-container>
     </v-card>
@@ -37,6 +42,14 @@ export default {
     return {
       quantity: 0,
     };
+  },
+  computed: {
+    funds() {
+      return this.$store.getters.funds;
+    },
+    insufficientFunds() {
+      return this.quantity * this.stock.price > this.funds;
+    },
   },
   methods: {
     buyStock() {
