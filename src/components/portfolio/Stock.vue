@@ -5,7 +5,7 @@
         <strong>
           {{ stock.name }}
           <small>
-            (Preço: {{ stock.price }} | Quantidade: {{ stock.quantity }})
+            (Preço: {{ stock.price | currency }} | Quantidade: {{ stock.quantity }})
           </small>
         </strong>
       </v-card-title>
