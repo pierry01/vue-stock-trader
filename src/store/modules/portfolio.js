@@ -39,8 +39,8 @@ export default {
         };
       });
     },
-  },
-  funds(state) {
-    return state.funds;
+    funds(state) {
+      return state.funds;
+    },
   },
 };
